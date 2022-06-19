@@ -66,7 +66,7 @@ st.write('Numero de registros:', num_filas)
 # Generacion de los dataframe de frecuencias
 df_sexo = df_provincias.SEXO.value_counts()
 df_edad = df_provincias.EDAD.value_counts()
-df_metodox = df_provincias.METODOX.value_counts()
+df_metodox = df_provincias.METODODX.value_counts()
 
 # Ploteo de las frecuencias
 st.bar_chart(df_sexo)
