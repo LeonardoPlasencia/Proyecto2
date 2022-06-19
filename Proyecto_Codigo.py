@@ -21,10 +21,10 @@ import streamlit as st
 import gdown
 import os
 
-# 0. TITULO DE PROYECTO
-st.title('Nombre del proyecto')
+#TITULO DE PROYECTO
+st.title('Casos positivos por COVID-19 en el Perú')
 
-# 1. CARGA DE DATOS
+#CARGA DE DATOS
 
 # Lectura de datos desde CSV
 #id = 1op-iq0XhBXBQOPlagCPE9TzFsFkkNVjQ
@@ -43,7 +43,7 @@ df = pd.read_csv("downloads/data.csv", sep = ";", parse_dates = ["FECHA_CORTE","
 # Simplificacion del dataset (retiro de columnas)
 df = df.drop(columns = ["DISTRITO","FECHA_CORTE","FECHA_RESULTADO","UBIGEO","id_persona"])
 
-# 2. FILTROS
+#Código de filtros
 
 # Construccion del set/list de departamentos (Valores unicos sin NA)
 set_departamentos = np.sort(df['DEPARTAMENTO'].dropna().unique())
@@ -61,7 +61,7 @@ num_filas = len(df_provincias.axes[0])
 
 st.write('Numero de registros:', num_filas)
 
-# GRAFICOS
+#Código de gráficos
 
 # Generacion de los dataframe de frecuencias
 df_sexo = df_provincias.SEXO.value_counts()
