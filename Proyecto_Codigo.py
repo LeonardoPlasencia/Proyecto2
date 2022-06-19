@@ -22,7 +22,7 @@ import gdown
 import os
 
 #TITULO DE PROYECTO
-st.title('Casos positivos por COVID-19 en el Perú')
+st.title('Nombre del proyecto')
 
 #CARGA DE DATOS
 
